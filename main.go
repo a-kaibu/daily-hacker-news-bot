@@ -50,7 +50,8 @@ func main() {
 		log.Fatal("DATA_SOURCE_URL environment variable is required")
 	}
 
-	date := time.Now().Format("2006-01-02")
+	jst := time.FixedZone("JST", 9*60*60)
+	date := time.Now().In(jst).Format("2006-01-02")
 	if len(os.Args) > 1 {
 		date = os.Args[1]
 	}
