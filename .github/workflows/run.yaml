@@ -2,7 +2,7 @@ name: Run Daily Bot
 
 on:
   schedule:
-    - cron: "0 20 * * *" # 日本時間 05:00
+    - cron: "0 22 * * *" # 日本時間 07:00
   workflow_dispatch:
     inputs:
       date:
